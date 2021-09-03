@@ -1,4 +1,4 @@
-package com.example.practicedemo;
+package com.example.training;
 
 import org.junit.Test;
 

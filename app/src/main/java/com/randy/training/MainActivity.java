@@ -1,14 +1,13 @@
-package com.example.practicedemo;
+package com.randy.training;
 
 import androidx.annotation.RequiresApi;
-import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Build;
 import android.os.Bundle;
 import android.widget.Button;
 
-import com.example.practicedemo.base.BaseActivity;
-import com.example.practicedemo.widget.Rotate3DLayout;
+import com.randy.training.base.BaseActivity;
+import com.randy.training.widget.Rotate3DLayout;
 
 
 public class MainActivity extends BaseActivity {

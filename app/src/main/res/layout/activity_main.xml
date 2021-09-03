@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context="com.randy.training.MainActivity">
 
     <Button
         android:id="@+id/bt_rotate"
@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:text="3D旋转" />
 
-    <com.example.practicedemo.widget.Rotate3DLayout
+    <com.randy.training.widget.Rotate3DLayout
         android:id="@+id/rl_rotate"
         android:layout_width="300dp"
         android:layout_height="400dp"
@@ -22,7 +22,7 @@
         android:background="@drawable/shape_bg"
         android:padding="10dp">
 
-        <com.example.practicedemo.widget.DefaultLayout
+        <com.randy.training.widget.DefaultLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
@@ -52,9 +52,9 @@
                     android:layout_height="wrap_content"
                     android:src="@mipmap/dog2" />
             </LinearLayout>
-        </com.example.practicedemo.widget.DefaultLayout>
+        </com.randy.training.widget.DefaultLayout>
 
-        <com.example.practicedemo.widget.ReverseLayout
+        <com.randy.training.widget.ReverseLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
@@ -84,6 +84,6 @@
                     android:layout_height="wrap_content"
                     android:src="@mipmap/dog" />
             </LinearLayout>
-        </com.example.practicedemo.widget.ReverseLayout>
-    </com.example.practicedemo.widget.Rotate3DLayout>
+        </com.randy.training.widget.ReverseLayout>
+    </com.randy.training.widget.Rotate3DLayout>
 </LinearLayout>

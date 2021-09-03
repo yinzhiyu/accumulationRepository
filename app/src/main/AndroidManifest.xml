@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.practicedemo">
+    package="com.randy.training">
 
     <application
         android:allowBackup="true"
@@ -10,13 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PracticeDemo">
         <activity
-            android:name=".base.BaseActivity"
+            android:name="com.randy.training.base.BaseActivity"
             android:exported="true"
             android:label="@string/title_activity_base"
            />
 <!--      android:theme="@style/Theme.PracticeDemo.NoActionBar"-->
         <activity
-            android:name=".MainActivity"
+            android:name="com.randy.training.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
