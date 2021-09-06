@@ -23,4 +23,31 @@
     <style name="Theme.PracticeDemo.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="Theme.PracticeDemo.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+<!--    SplashTheme-->
+    <style name="JetpackSplashTheme" parent="JetpackSplashTheme.Base">
+        <!-- Animated vector drawable -->
+        <!--        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_icon_bird_small_animated_translate</item>-->
+        <!--        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_icon_bird_small_animated_rotate</item>-->
+
+        <!-- Adaptive icon drawable -->
+        <item name="windowSplashScreenAnimatedIcon">@mipmap/ic_launcher_bird_final</item>
+    </style>
+
+    <style name="JetpackSplashTheme.Base" parent="Theme.SplashScreen">
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryDark">@color/purple_700</item>
+        <item name="colorAccent">@color/teal_200</item>
+        <item name="android:statusBarColor">@color/appBackground</item>
+
+        <item name="windowSplashScreenAnimationDuration">@integer/icon_animator_duration</item>
+        <item name="windowSplashScreenBackground">@color/appBackground</item>
+
+        <item name="postSplashScreenTheme">@style/SplashActivityTheme</item>
+    </style>
+    <!--    <style name="SplashActivityTheme" parent="Theme.AppCompat.DayNight.NoActionBar">-->
+    <style name="SplashActivityTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryDark">@color/purple_700</item>
+        <item name="colorAccent">@color/teal_200</item>
+    </style>
 </resources>
