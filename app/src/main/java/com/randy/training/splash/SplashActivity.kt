@@ -1,7 +1,6 @@
 package com.randy.training.splash
 
 import android.os.Bundle
-import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
@@ -17,6 +16,7 @@ import androidx.lifecycle.LifecycleObserver
 import androidx.lifecycle.OnLifecycleEvent
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.randy.training.MainActivity
+import com.randy.training.MainActivity11
 import com.randy.training.splash.theme.FlappyBirdTheme
 import com.randy.training.splash.model.GameAction
 import com.randy.training.splash.model.GameStatus
@@ -29,7 +29,7 @@ import com.randy.training.utils.IntentUtil
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.isActive
 
-class MainActivity : AppCompatActivity() {
+class SplashActivity : AppCompatActivity() {
     private val viewModel: GameViewModel by viewModels()
 
     // `@RequiresApi(Build.VERSION_CODES.S)

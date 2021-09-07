@@ -10,7 +10,7 @@ import com.randy.training.base.BaseActivity;
 import com.randy.training.widget.Rotate3DLayout;
 
 
-public class MainActivity extends BaseActivity {
+public class MainActivity11 extends BaseActivity {
     private Button btRotate;
     private Rotate3DLayout rlRotate;
 
@@ -18,7 +18,7 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main11);
         btRotate = (Button) findViewById(R.id.bt_rotate);
         rlRotate = (Rotate3DLayout) findViewById(R.id.rl_rotate);
         //点击后翻转
