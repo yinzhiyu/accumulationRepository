@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'kotlin-android-extensions'
 }
 
 android {
@@ -25,6 +26,13 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+    }
+
+    dataBinding {
+        enabled = true
+    }
+    viewBinding {
+        enabled = true
     }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
@@ -81,4 +89,7 @@ dependencies {
 
     //splashscreen
     implementation "androidx.core:core-splashscreen:1.0.0-alpha01"
+
+//    implementation "androidx.lifecycle:lifecycle-extensions:2.1.0"
+//    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.1.0"
 }
