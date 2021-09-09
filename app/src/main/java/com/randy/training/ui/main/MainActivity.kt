@@ -11,29 +11,31 @@ import android.content.pm.PackageManager
 
 import androidx.core.content.ContextCompat
 import android.widget.Toast
+import androidx.annotation.NonNull
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.randy.training.R
 import com.randy.training.Rotate3DActivity
-import com.randy.training.Rotate3DAnimation
 import com.randy.training.base.adapter.recyclerview.BaseAdapter
+import com.randy.training.databinding.ActivityMainBinding
+import com.randy.training.ui.diyui.PasswordInputBoxActivity
 import com.randy.training.webview.WebViewActivity
 import com.randy.training.webview.WebViewGoodActivity
-import kotlinx.android.synthetic.main.activity_main.*
 
 
 class MainActivity : AppCompatActivity() {
     private val GET_STORAGE_PERMISSION = 2
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        initView()
+        val binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        initView(binding)
     }
 
-    private fun initView() {
+    private fun initView(binding:  ActivityMainBinding) {
         val layoutManager = LinearLayoutManager(this)
-        rv_training_item_list.layoutManager = layoutManager
+        binding.rvTrainingItemList.layoutManager = layoutManager
         val adapter = Main2Adapter(this, R.layout.item_main_layout)
-        rv_training_item_list.adapter = adapter
+        binding.rvTrainingItemList.adapter = adapter
         getLocalList().let {
             adapter.refreshData(it) }
         adapter.setOnItemClickListener(object : BaseAdapter.OnItemClickListener {
@@ -47,11 +49,12 @@ when(position){
     0-> IntentUtil.go(this, WebViewActivity::class.java)
     1-> IntentUtil.go(this, WebViewGoodActivity::class.java)
     2-> IntentUtil.go(this, Rotate3DActivity::class.java)
+    3-> IntentUtil.go(this, PasswordInputBoxActivity::class.java)
 
 }
     }
     private fun getLocalList(): MutableList<String> {
-        val functionName = mutableListOf("Webview1", "Webview2", "3D翻转", "four")
+        val functionName = mutableListOf("Webview1", "Webview2", "3D翻转", "密码输入框")
         functionName.add("five")
         return functionName
     }
