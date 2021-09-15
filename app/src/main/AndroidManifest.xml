@@ -14,6 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PracticeDemo">
         <activity
+            android:name=".ui.kotlin.KotlinDemoActivity"
+            android:exported="true" />
+        <activity
             android:name=".ui.diyui.PasswordInputBoxActivity"
             android:exported="true" />
         <activity
