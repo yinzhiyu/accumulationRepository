@@ -27,10 +27,15 @@ import java.io.InputStream;
  * desc   :
  */
 public class PhotoUtils {
+    public String jUnitStr = "test";
     private static final String TAG = "PhotoUtils";
 
     public static final String INTENT_TYPE_IMAGE = "image/*";
     public static final String INTENT_TYPE_FILE = "*/*";
+
+    public static void test(String str) {
+        System.out.println("测试单元测试："+str);
+    }
 
     /**
      * 打开本地相册选择图片
@@ -70,6 +75,7 @@ public class PhotoUtils {
 //        }
 //        super.onActivityResult(requestCode, resultCode, data);
 //    }
+
     /**
      * @param activity    当前activity
      * @param imageUri    拍照后照片存储路径
@@ -84,7 +90,7 @@ public class PhotoUtils {
         intentCamera.setAction(MediaStore.ACTION_IMAGE_CAPTURE);
         //将拍照结果保存至photo_file的Uri中，不保留在相册中
         intentCamera.putExtra(MediaStore.EXTRA_OUTPUT, imageUri);
-        if (activity!=null){
+        if (activity != null) {
             activity.startActivityForResult(intentCamera, requestCode);
         }
     }
@@ -146,6 +152,7 @@ public class PhotoUtils {
             return null;
         }
     }
+
     /**
      * 通过uri获取图片并进行压缩
      *
@@ -161,7 +168,7 @@ public class PhotoUtils {
         input.close();
         int originalWidth = onlyBoundsOptions.outWidth;
         int originalHeight = onlyBoundsOptions.outHeight;
-        if ((originalWidth == -1) || (originalHeight == -1)){
+        if ((originalWidth == -1) || (originalHeight == -1)) {
             return null;
         }
         //图片分辨率以480x800为标准
@@ -174,7 +181,7 @@ public class PhotoUtils {
         } else if (originalWidth < originalHeight && originalHeight > hh) {//如果高度高的话根据宽度固定大小缩放
             be = (int) (originalHeight / hh);
         }
-        if (be <= 0){
+        if (be <= 0) {
             be = 1;
         }
         //比例压缩
@@ -294,7 +301,7 @@ public class PhotoUtils {
                 return cursor.getString(column_index);
             }
         } finally {
-            if (cursor != null){
+            if (cursor != null) {
                 cursor.close();
             }
         }
