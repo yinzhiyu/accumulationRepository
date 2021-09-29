@@ -20,7 +20,22 @@ android {
             useSupportLibrary true
         }
     }
+    //签名配置
+    signingConfigs {
+        debug {
+            keyAlias 'yinzhiyu'
+            keyPassword 'Qweasd123'
+            storeFile file('E:\\githubTraining\\accumulationRepository\\randy.jks')
+            storePassword 'Qweasd123'
+        }
 
+        release {
+            keyAlias 'yinzhiyu'
+            keyPassword 'Qweasd123'
+            storeFile file('E:\\githubTraining\\accumulationRepository\\randy.jks')
+            storePassword 'Qweasd123'
+        }
+    }
     buildTypes {
         release {
             minifyEnabled false
@@ -65,7 +80,6 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
     implementation 'androidx.navigation:navigation-fragment:2.3.5'
     implementation 'androidx.navigation:navigation-ui:2.3.5'
-
     implementation 'com.google.android.material:material:1.3.0'
 
     implementation 'androidx.compose.ui:ui:1.0.0-beta07'

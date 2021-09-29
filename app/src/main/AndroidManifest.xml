@@ -15,26 +15,26 @@
         android:theme="@style/Theme.PracticeDemo">
         <activity
             android:name=".ui.kotlin.KotlinDemoActivity"
-            android:exported="true" />
+            android:configChanges="keyboardHidden|orientation"/>
         <activity
             android:name=".ui.diyui.PasswordInputBoxActivity"
-            android:exported="true" />
+            android:configChanges="keyboardHidden|orientation"/>
         <activity
             android:name=".webview.WebViewGoodActivity"
-            android:exported="true" />
+            android:configChanges="keyboardHidden|orientation" />
         <activity
             android:name=".webview.WebViewActivity"
-            android:exported="true" />
+            android:configChanges="keyboardHidden|orientation" />
         <activity
             android:name=".ui.main.MainActivity"
-            android:exported="true" />
+            android:configChanges="keyboardHidden|orientation" />
         <activity
             android:name=".base.BaseActivity"
-            android:exported="true"
+            android:configChanges="keyboardHidden|orientation"
             android:label="@string/title_activity_base" />
         <activity
             android:name=".Rotate3DActivity"
-            android:exported="true"
+            android:configChanges="keyboardHidden|orientation"
             android:label="@string/title_activity_base" /> <!-- android:theme="@style/Theme.PracticeDemo.NoActionBar" -->
         <activity
             android:name=".ui.splash.SplashActivity"
