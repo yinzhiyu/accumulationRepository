@@ -29,7 +29,7 @@
             android:name=".ui.main.MainActivity"
             android:configChanges="keyboardHidden|orientation" />
         <activity
-            android:name=".base.BaseActivity"
+            android:name=".base.BaseAddViewActivity"
             android:configChanges="keyboardHidden|orientation"
             android:label="@string/title_activity_base" />
         <activity

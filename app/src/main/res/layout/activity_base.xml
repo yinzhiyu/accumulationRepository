@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:id="@+id/cl_bg"
     android:orientation="vertical"
-    tools:context="com.randy.training.base.BaseActivity">
+    tools:context="com.randy.training.base.BaseAddViewActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"

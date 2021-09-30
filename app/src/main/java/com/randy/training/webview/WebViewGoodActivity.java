@@ -24,12 +24,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.FileProvider;
 
 import com.randy.training.R;
+import com.randy.training.base.BaseActivity;
 import com.randy.training.utils.PhotoUtils;
 
 import java.io.File;
 
 
-public class WebViewGoodActivity extends AppCompatActivity {
+public class WebViewGoodActivity extends BaseActivity {
     private final static String TAG = "villa";
     private WebView webView;
     private ValueCallback<Uri> mUploadMessage;

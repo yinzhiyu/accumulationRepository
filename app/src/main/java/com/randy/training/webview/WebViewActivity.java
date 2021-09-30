@@ -20,8 +20,9 @@ import android.widget.LinearLayout;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.randy.training.R;
+import com.randy.training.base.BaseActivity;
 
-public class WebViewActivity extends AppCompatActivity {
+public class WebViewActivity extends BaseActivity {
 
     private static final String TAG = "MainActivity";
     private SafeWebView mWebView;

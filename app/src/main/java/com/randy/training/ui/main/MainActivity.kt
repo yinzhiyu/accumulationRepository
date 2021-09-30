@@ -15,6 +15,7 @@ import androidx.annotation.NonNull
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.randy.training.R
 import com.randy.training.Rotate3DActivity
+import com.randy.training.base.BaseActivity
 import com.randy.training.base.adapter.recyclerview.BaseAdapter
 import com.randy.training.databinding.ActivityMainBinding
 import com.randy.training.ui.diyui.PasswordInputBoxActivity
@@ -23,10 +24,11 @@ import com.randy.training.webview.WebViewActivity
 import com.randy.training.webview.WebViewGoodActivity
 
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : BaseActivity() {
     private val GET_STORAGE_PERMISSION = 2
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setSlidingEnable(false);
         val binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         initView(binding)

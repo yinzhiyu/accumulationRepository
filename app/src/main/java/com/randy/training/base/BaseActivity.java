@@ -1,71 +1,59 @@
 package com.randy.training.base;
 
-import android.os.Build;
+import android.app.Activity;
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.FrameLayout;
 
-import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.navigation.ui.AppBarConfiguration;
 
-import com.randy.training.R;
-
-
+/**
+ * @author : yinzhiyu
+ * e-mail : yinzhiyu@zongheng.com
+ * date   : 2021/9/3015:43
+ * desc   :
+ */
 public class BaseActivity extends AppCompatActivity {
+    private SlidingFrameLayout slidingFrameLayout;
 
-    private AppBarConfiguration appBarConfiguration;
-    private FrameLayout parentLinearLayout;//把父类activity和子类activity的view都add到这里
-
-
-    @RequiresApi(api = Build.VERSION_CODES.Q)
     @Override
-
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        ActivityStackManager.getAppManager().addActivity(this);
+        slidingFrameLayout = new SlidingFrameLayout(this);
+        slidingFrameLayout.bind();
+        Activity lastActivity = ActivityStackManager.getAppManager().lastActivity();
+        slidingFrameLayout.setBehindActivity(lastActivity);
+    }
 
-        initContentView(R.layout.activity_base);
-        findViewById(R.id.cl_bg).setBackground(getResources().getDrawable(R.mipmap.dog2));
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (slidingFrameLayout != null) {
+            slidingFrameLayout.createBehindBitmap();
+        }
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        if (slidingFrameLayout != null) {
+            slidingFrameLayout.recycleBitmap();
+        }
     }
 
     /**
-     * 初始化contentview
+     * 设置是否支持横向拖拽
+     *
+     * @param slidingEnable
      */
-
-    private void initContentView(int layoutResID) {
-        ViewGroup viewGroup = (ViewGroup) findViewById(android.R.id.content);
-
-        viewGroup.removeAllViews();
-
-        parentLinearLayout = new FrameLayout(this);
-
-//        parentLinearLayout.setOrientation(LinearLayout.VERTICAL);
-
-        viewGroup.addView(parentLinearLayout);
-
-        LayoutInflater.from(this).inflate(layoutResID, parentLinearLayout, true);
-
+    public void setSlidingEnable(boolean slidingEnable) {
+        if (slidingFrameLayout != null) {
+            slidingFrameLayout.setSlidingEnable(slidingEnable);
+        }
     }
 
     @Override
-    public void setContentView(int layoutResID) {
-        LayoutInflater.from(this).inflate(layoutResID, parentLinearLayout, true);
-
-    }
-
-    @Override
-
-    public void setContentView(View view) {
-        parentLinearLayout.addView(view);
-
-    }
-
-    @Override
-
-    public void setContentView(View view, ViewGroup.LayoutParams params) {
-        parentLinearLayout.addView(view, params);
-
+    protected void onDestroy() {
+        super.onDestroy();
+        ActivityStackManager.getAppManager().finishActivity();
     }
 }

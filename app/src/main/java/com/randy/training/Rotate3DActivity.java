@@ -6,11 +6,11 @@ import android.os.Build;
 import android.os.Bundle;
 import android.widget.Button;
 
-import com.randy.training.base.BaseActivity;
+import com.randy.training.base.BaseAddViewActivity;
 import com.randy.training.widget.Rotate3DLayout;
 
 
-public class Rotate3DActivity extends BaseActivity {
+public class Rotate3DActivity extends BaseAddViewActivity {
     private Button btRotate;
     private Rotate3DLayout rlRotate;
 
