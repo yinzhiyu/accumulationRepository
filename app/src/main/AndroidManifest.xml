@@ -17,7 +17,7 @@
             android:name=".ui.kotlin.KotlinDemoActivity"
             android:configChanges="keyboardHidden|orientation"/>
         <activity
-            android:name=".ui.diyui.PasswordInputBoxActivity"
+            android:name=".ui.diyui.list.LetterListActivity"
             android:configChanges="keyboardHidden|orientation"/>
         <activity
             android:name=".webview.WebViewGoodActivity"

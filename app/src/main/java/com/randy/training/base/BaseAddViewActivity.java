@@ -14,7 +14,7 @@ import androidx.navigation.ui.AppBarConfiguration;
 import com.randy.training.R;
 
 
-public class BaseAddViewActivity extends AppCompatActivity {
+public class BaseAddViewActivity extends BaseActivity {
 
     private AppBarConfiguration appBarConfiguration;
     private FrameLayout parentLinearLayout;//把父类activity和子类activity的view都add到这里

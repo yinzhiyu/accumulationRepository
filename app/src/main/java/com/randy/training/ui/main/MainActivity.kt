@@ -1,7 +1,6 @@
 package com.randy.training.ui.main
 
 import android.Manifest
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import com.randy.training.utils.IntentUtil
@@ -11,14 +10,13 @@ import android.content.pm.PackageManager
 
 import androidx.core.content.ContextCompat
 import android.widget.Toast
-import androidx.annotation.NonNull
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.randy.training.R
 import com.randy.training.Rotate3DActivity
 import com.randy.training.base.BaseActivity
 import com.randy.training.base.adapter.recyclerview.BaseAdapter
 import com.randy.training.databinding.ActivityMainBinding
-import com.randy.training.ui.diyui.PasswordInputBoxActivity
+import com.randy.training.ui.diyui.list.LetterListActivity
 import com.randy.training.ui.kotlin.KotlinDemoActivity
 import com.randy.training.webview.WebViewActivity
 import com.randy.training.webview.WebViewGoodActivity
@@ -54,14 +52,14 @@ class MainActivity : BaseActivity() {
             0 -> IntentUtil.go(this, WebViewActivity::class.java)
             1 -> IntentUtil.go(this, WebViewGoodActivity::class.java)
             2 -> IntentUtil.go(this, Rotate3DActivity::class.java)
-            3 -> IntentUtil.go(this, PasswordInputBoxActivity::class.java)
+            3 -> IntentUtil.go(this, LetterListActivity::class.java)
             4 -> IntentUtil.go(this, KotlinDemoActivity::class.java)
 
         }
     }
 
     private fun getLocalList(): MutableList<String> {
-        val functionName = mutableListOf("Webview1", "Webview2", "3D翻转", "密码输入框")
+        val functionName = mutableListOf("Webview1", "Webview2", "3D翻转", "字母列表")
         functionName.add("Kotlin demo")
         functionName.add("other")
         return functionName
