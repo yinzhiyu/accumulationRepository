@@ -7,6 +7,7 @@ import com.randy.training.utils.IntentUtil
 import androidx.core.app.ActivityCompat
 
 import android.content.pm.PackageManager
+import android.graphics.Color
 
 import androidx.core.content.ContextCompat
 import android.widget.Toast
@@ -45,6 +46,7 @@ class MainActivity : BaseActivity() {
                 clickItem(view, position)
             }
         })
+        binding.alMaintain.setBackgroundColor(Color.CYAN)
     }
 
     private fun clickItem(view: View, position: Int) {

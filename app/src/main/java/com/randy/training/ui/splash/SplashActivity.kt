@@ -25,6 +25,7 @@ import com.randy.training.ui.splash.view.Clickable
 import com.randy.training.ui.splash.view.GameScreen
 import com.randy.training.ui.splash.viewmodel.GameViewModel
 import com.randy.training.utils.IntentUtil
+import com.randy.training.utils.PermissionUtil
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.isActive
 
@@ -40,7 +41,7 @@ class SplashActivity : AppCompatActivity() {
 
         // Expand screen to status bar.
         StatusBarUtil.transparentStatusBar(this)
-
+        PermissionUtil.verifyStoragePermissions(this)
         setContent {
             FlappyBirdTheme {
                 // A surface container using the 'background' color from the theme
