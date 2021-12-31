@@ -7,4 +7,7 @@
         <attr name="letterEnableIndicator" format="boolean" />
         <attr name="letterIndicatorColor" format="color" />
     </declare-styleable>
+    <declare-styleable name="Skinable">
+        <attr name="isSupport" format="boolean" />
+    </declare-styleable>
 </resources>
